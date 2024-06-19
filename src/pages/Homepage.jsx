@@ -1,4 +1,3 @@
-
 /*faltan imports*/
 
 
@@ -33,5 +32,5 @@ const Homepage = () => {
               <div className="stat-value">977130</div> {/* Valor estadístico que se muestra al lado de la bandera */}
             </div>
           </div>
-        </header>
-  
+        </header> 
+
