@@ -1,4 +1,15 @@
 import { Outlet} from "react-router-dom"
+
+const Layout = () => {
+    return (
+        <>
+            <main><Outlet /></main>
+            <footer>Footer</footer>
+        </>
+    )
+}
+
+export default Layoutimport { Outlet} from "react-router-dom"
 import Sidenav from "../components/navbar/Sidenav"
 import TrackerCovid from "../components/Tracker-Overall/TrackerCovid"
 import TrackerTop10 from "../components/Tracker-Top10/TrackerTop10"
