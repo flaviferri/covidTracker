@@ -41,7 +41,7 @@ export default UseApi;
                     throw new Error (`Error! status: ${response.status}`);
                 }
                 const json_data = await response.json();
-                setData(json_data); 
+                setData(json_data); // Actualiza el estados de los datos por los obtenidos
     
             }catch(error){
 
