@@ -1,5 +1,7 @@
 import {useState, useEffect} from "react"
 
+
+
 const useApi = (url) =>{
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
@@ -9,8 +11,7 @@ const useApi = (url) =>{
         const fetchData = async() =>{
 =======
      useEffect(()=>{ 
-        const getData = async(url) =>{
->>>>>>> 3e5f3c3 (initial api)
+        const getData = async() =>{
             try{
                 const response = await fetch(url);
                 if(!response.ok) {
@@ -24,7 +25,7 @@ const useApi = (url) =>{
                 setError(error.message);
 =======
                 const json_data = await response.json();
-                setData(json_data); // Actualiza el estados de los datos por los obtenidos
+                setData(json_data); 
     
             }catch(error){
               setError(error.message);
