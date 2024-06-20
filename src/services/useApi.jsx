@@ -37,7 +37,7 @@ export default UseApi;
         const getData = async() =>{
             try{
                 const response = await fetch(url);
-                if(!response.ok){
+                if(!response.ok) {
                     throw new Error (`Error! status: ${response.status}`);
                 }
                 const json_data = await response.json();
@@ -48,9 +48,9 @@ export default UseApi;
             setError(error.message);
             setError(error.message);
                 console.error(`Error fetching data: ${error}`);
-            }
-        }
-        getData(url);
+            } 
+        };
+        fetchData();
     }, [url]);
     return{data}; // return{data,error};
 
