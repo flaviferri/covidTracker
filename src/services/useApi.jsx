@@ -23,6 +23,7 @@ const UseApi = (url) =>{
         }
         getData(url);
     }, [url]);
+
     return{data,error};
 
 }
