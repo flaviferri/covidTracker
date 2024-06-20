@@ -19,9 +19,9 @@ const UseApi = (url) =>{
             }catch(error){
             setError(error.message);
                 console.error(`Error fetching data: ${error}`);
-            }
-        }
-        getData(url);
+            } 
+        };
+        fetchData();
     }, [url]);
 
     return{data,error};
