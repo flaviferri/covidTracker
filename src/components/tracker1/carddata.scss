@@ -1,0 +1,9 @@
+@use "../../styles/variables.scss" as v;
+.carddata{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    .individualcard{
+        width: 45%;
+    }
+}
