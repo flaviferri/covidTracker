@@ -1,6 +1,9 @@
+import Tracker2Comp from "../components/Tracker2/Tracker2Comp";
+
+
 const Tracker2 = () =>{
     return(
-        <><h1>tracker 2</h1></>
+        <Tracker2Comp/>
     )
 };
 
