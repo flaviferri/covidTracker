@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './sidenav.scss'
 import { TfiLayoutGrid2,TfiPieChart,TfiViewList, TfiLayoutTab, TfiLayersAlt, TfiStatsUp, TfiWorld, TfiComment, TfiFlickrAlt } from "react-icons/tfi";
 
@@ -9,26 +9,17 @@ const Sidenav = () => {
 
   return (
     <Sidebar collapsed={collapsed}>
-      <Menu
-        menuItemStyles={{
-          button: {
-            [`&.active`]: {
-              backgroundColor: '#13395e',
-              color: '#b6c8d9',
-            },
-          },
-        }}
-      >
-        <MenuItem component={<Link to="/home" />} className='navbar'></MenuItem>
-        <MenuItem component={<Link to="/tracker1" />} className='navbar' > <TfiPieChart /></MenuItem>
-        <MenuItem component={<Link to="/tracker2" />} className='navbar' > <TfiViewList /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' > <TfiLayoutGrid2 /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' ><TfiLayoutTab /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' ><TfiLayersAlt /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' ><TfiStatsUp /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' ><TfiWorld /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' ><TfiComment /></MenuItem>
-        <MenuItem component={<Link to="/tracker3" />} className='navbar' ><TfiFlickrAlt /></MenuItem>
+      <Menu>
+        <MenuItem component={<NavLink to="/home" activeclassname="active" />} className='navbar'><img src='../../../public/images/coronavirus.png' activeclassname="active" /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker1" activeclassname="active" />} className='navbar' > <TfiPieChart /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker2" activeclassname="active" />} className='navbar' > <TfiViewList /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker3" activeclassname="active" />} className='navbar' > <TfiLayoutGrid2 /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker4" activeclassname="active" />} className='navbar' ><TfiLayoutTab /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker5" activeclassname="active" />} className='navbar' ><TfiLayersAlt /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker6" activeclassname="active" />} className='navbar' ><TfiStatsUp /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker7" activeclassname="active" />} className='navbar' ><TfiWorld /></MenuItem>
+        <MenuItem component={<NavLink to="/tracker8" activeclassname="active" />} className='navbar' ><TfiComment /></MenuItem>
+        <MenuItem component={<NavLink to="/" activeclassname="active" />}className='navbar'><TfiFlickrAlt /></MenuItem>
       </Menu>
     </Sidebar>
   )

@@ -3,11 +3,53 @@ aside{
     height: 100vh;
 }
 .navbar{
-    a{
-        span{
-            svg{
-                color:v.$primary-color;
+    padding: 5px 0px;
+    margin-left: 5px;
+        a{
+            font-size: 22px;
+            width: 80%;
+            text-align: center;
+            padding-left: 0!important;
+            padding-right: 0!important;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            span{
+                svg{
+                    color:v.$primary-color;
+                }
             }
         }
+        img{
+            width: 50px;
+            animation: rotate 3s linear infinite;
+        }
+        a:hover{
+            background-color: v.$secondary-color!important;
+            span{
+                svg{
+                    color: #fff;
+                }
+            }
+        }
+        a.active{
+            background-color: v.$secondary-color;
+            span{
+                svg{
+                    color: #fff;
+                }
+            }
+        }
+}
+.navbar:first-child{
+    margin-bottom: 10px;
+    a:hover{
+        background-color: #fff!important;
     }
+    a.active{
+        background-color: #fff!important;
+    }
+}
+.navbar:last-child{
+    margin-top:15px ;
 }
