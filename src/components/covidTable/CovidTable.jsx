@@ -9,7 +9,7 @@ const CovidTable = () => {
   };
 
   if (!data) {
-    return <div>Loading...</div>;
+    return <div>La informacion se está cargando...</div>;
   }
 
   const categories = ["cases", "todayCases", "todayDeaths", "active", "critical", "recovered"];
@@ -21,8 +21,7 @@ const CovidTable = () => {
       <table>
         <thead>
           <tr>
-            <th>Country</th>
-            {categories.map(category => (
+              {categories.map(category => (
               <th key={category}>{category}</th>
             ))}
           </tr>
@@ -30,10 +29,15 @@ const CovidTable = () => {
         <tbody>
           {top10Data[0].map((country, index) => (
             <tr key={country.country}>
-              <td>{country.country}</td>
-              {categories.map(category => (
-                <td key={category}>{top10Data[categories.indexOf(category)][index][category]}</td>
-              ))}
+                {categories.map(category => {
+                const data = top10Data[categories.indexOf(category)][index];
+                return (
+                  <td key={category}>
+                    <img src={data.countryInfo.flag} alt={`Flag of ${data.country}`} style={{ width: '30px', marginRight: '10px' }} />
+                    {data.country} - {data[category]}
+                  </td>
+                );
+                })}
             </tr>
           ))}
         </tbody>
