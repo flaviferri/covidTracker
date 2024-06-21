@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Homepage from "../pages/Homepage";
 import Layout from "../layout/Layout";
 import Tracker1 from "../pages/Tracker1";
 import Tracker2 from "../pages/Tracker2";
