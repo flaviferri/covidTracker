@@ -33,4 +33,7 @@ const Homepage = () => {
             </div>
           </div>
         </header> 
+    </div>
+)}
 
+export default Homepage
