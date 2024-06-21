@@ -1,0 +1,8 @@
+@use "./styles/variables.scss" as v;
+#root{
+    width: 100%;
+    display: flex;
+}
+body{
+    font-family: v.$font;
+}

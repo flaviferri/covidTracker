@@ -1,0 +1,13 @@
+@use "../../styles/variables.scss" as v;
+aside{
+    height: 100vh;
+}
+.navbar{
+    a{
+        span{
+            svg{
+                color:v.$primary-color;
+            }
+        }
+    }
+}
