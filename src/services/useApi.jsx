@@ -2,11 +2,11 @@ import {useState, useEffect} from "react"
 
 
 
-const useApi = (url) =>{
+const UseApi = (url) =>{
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
 
-     useEffect(()=>{ 
+    useEffect(()=>{ 
         const getData = async() =>{
             try{
                 const response = await fetch(url);
@@ -17,7 +17,7 @@ const useApi = (url) =>{
                 setData(json_data); 
     
             }catch(error){
-              setError(error.message);
+            setError(error.message);
                 console.error(`Error fetching data: ${error}`);
             }
         }
@@ -26,4 +26,5 @@ const useApi = (url) =>{
     return{data,error};
 
 }
-export default useApi;
+export default UseApi; 
+
