@@ -1,10 +1,10 @@
-//import axios from "axios"
 import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import useApi from "../../services/useApi";
 import column from "./Tr2Table";
+import './tracker2Comp.scss';
 
-export default function Tracker2() {
+export default function Tracker2Comp() {
     const { data: apiData, error } = useApi('https://disease.sh/v3/covid-19/countries');
     const [records, setRecords] = useState([]);
     const [filterRecords, setFilterRecords] = useState([]);
@@ -35,7 +35,7 @@ export default function Tracker2() {
             columns={column}
             data={records} 
             pagination
-            defaultSortField="cases"
+            defaultSortFieldId="cases"
             defaultSortAsc={false}
             
             />
