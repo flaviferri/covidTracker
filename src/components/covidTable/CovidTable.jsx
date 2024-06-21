@@ -1,5 +1,15 @@
 import React from 'react';
 import useApi from '../../services/useApi';
+import './CovidTable.scss';
+
+const categoryHeaders = {
+  cases: "Top Cases",
+  todayCases: "Today Cases",
+  todayDeaths: "Today Deaths",
+  active: "Top Active",
+  critical: "Top Critical",
+  recovered: "Top Recover"
+};
 
 const CovidTable = () => {
   const { data } = useApi('https://disease.sh/v3/covid-19/countries');
@@ -13,16 +23,25 @@ const CovidTable = () => {
   }
 
   const categories = ["cases", "todayCases", "todayDeaths", "active", "critical", "recovered"];
+  const categoryHeaders = {
+    cases: "Top Cases",
+    todayCases: "Today Cases",
+    todayDeaths: "Today Deaths",
+    active: "Top Active",
+    critical: "Top Critical",
+    recovered: "Top Recover"
+  };
+
   const top10Data = categories.map(category => getTop10(category));
 
   return (
     <div>
       <h1>Top 10 Country wise Covid-19 Updates - Tiles</h1>
-      <table>
+      <table  className="table">
         <thead>
           <tr>
               {categories.map(category => (
-              <th key={category}>{category}</th>
+              <th key={category}>{categoryHeaders[category]}</th> //personalizacion de las categorias
             ))}
           </tr>
         </thead>
@@ -34,7 +53,8 @@ const CovidTable = () => {
                 return (
                   <td key={category}>
                     <img src={data.countryInfo.flag} alt={`Flag of ${data.country}`} style={{ width: '30px', marginRight: '10px' }} />
-                    {data.country} - {data[category]}
+                    <span className="country-name">{data.country}</span>
+                    <span className="country-value">{data[category]}</span>
                   </td>
                 );
                 })}
