@@ -33,6 +33,7 @@ export default UseApi;
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
 
+<<<<<<< HEAD
     useEffect(()=>{ 
     useEffect(()=>{ 
         const getData = async() =>{
