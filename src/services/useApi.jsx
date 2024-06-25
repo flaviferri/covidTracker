@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useState, useEffect} from "react"
 import axios from 'axios'
 
@@ -54,7 +53,7 @@ export default UseApi;
         };
         fetchData();
     }, [url]);
-    return{data}; // return{data,error};
+    return{data,error};
 
 }
 export default UseApi; 

@@ -62,4 +62,3 @@ export const router = createBrowserRouter([
       ]
   },
 ])
->>>>>>> 28fb68d (striped table color and blue font color)
