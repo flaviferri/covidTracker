@@ -1,9 +1,9 @@
 
-import UseApi from '../../services/UseApi';
+import UseApi from '../../services/useApi';
 import { countries_url } from '../../config/urls';
-import "./tracker1.scss";
+import "./trackerTop10.scss";
 
-const Tracker1 = () => {
+const Tracker = () => {
     const { data, error } = UseApi(countries_url);
 
     if (error) {
@@ -36,4 +36,4 @@ const Tracker1 = () => {
 );
 };
 
-export default Tracker1;
+export default Tracker;

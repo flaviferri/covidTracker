@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 /* import {RouterProvider } from 'react-router-dom'
 import { router} from './router' */
-import App from "./App";
+
 import './index.scss'
 import {RouterProvider } from 'react-router-dom'
 import { router} from './router'
