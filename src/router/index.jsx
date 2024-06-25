@@ -1,7 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
-import Tracker1 from "../components/tracker1/Tracker1"
-
 import Tracker1 from "../pages/Tracker1";
 import Tracker2 from "../pages/Tracker2";
 import Tracker3 from "../pages/Tracker3";
