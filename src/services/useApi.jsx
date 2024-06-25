@@ -33,6 +33,7 @@ export default UseApi;
     const [error, setError] = useState(null)
 
     useEffect(()=>{ 
+    useEffect(()=>{ 
         const getData = async() =>{
             try{
                 const response = await fetch(url);
@@ -43,6 +44,7 @@ export default UseApi;
                 setData(json_data); 
     
             }catch(error){
+            setError(error.message);
             setError(error.message);
                 console.error(`Error fetching data: ${error}`);
             }
