@@ -2,7 +2,7 @@
 A project to visualize and analyze COVID-19 data in real-time using React.
 
 ## Table of Contents
-- Description 📝
+- [Description 📝](#Description)
 - Main Features ✨
 - Visuals  📷
 - Built With 🛠️
@@ -11,7 +11,7 @@ A project to visualize and analyze COVID-19 data in real-time using React.
 - Contributors ✒️
 
 
-## [Description 📝](#description)
+## Description 📝
 
 The COVID Tracker Dashboard is an interactive platform designed to visualize real-time data on the COVID-19 pandemic. Using the disease.sh API, the dashboard allows users to filter and sort data by country, visualize trend graphs, and access detailed information through an intuitive and responsive user interface.
 
