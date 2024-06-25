@@ -2,20 +2,20 @@
 A project to visualize and analyze COVID-19 data in real-time using React.
 
 ## Table of Contents
-- [Description 📝](#Description)
-- Main Features ✨
-- Visuals  📷
-- Built With 🛠️
-- Key Features  🔑
-- Installation and Execution  🚀
-- Contributors ✒️
+- [Description 📝](#description)
+- [Main Features ✨](#main-features)
+- [Visuals  📷](#visuals)
+- [Built With 🛠️](#built-with)
+- [Key Features 🔑](#key-features)
+- [Installation and Execution  🚀](#installation-and-execution)
+- [Contributors ✒️](#contributors)
 
 
 ## Description 📝
 
 The COVID Tracker Dashboard is an interactive platform designed to visualize real-time data on the COVID-19 pandemic. Using the disease.sh API, the dashboard allows users to filter and sort data by country, visualize trend graphs, and access detailed information through an intuitive and responsive user interface.
 
-## [Main Features ✨](#main-features)
+## Main Features ✨
 
 Real-time data visualization.
 Filters by country and keywords.
@@ -24,7 +24,7 @@ Interactive map with statistics by country.
 Responsive interface compatible with major browsers.
 
 
-## [Visuals 📷](#visuals)
+## Visuals  📷
 
 (Below are some screenshots of the project:
 
@@ -37,7 +37,7 @@ Filterable and sortable data table.
 
 Trend graph of cases and deaths.)
 
-## [Built With 🛠️](#built-with)
+## Built With 🛠️
 
 React: Main framework for building the interface.
 Vite: Fast build tool.
@@ -48,7 +48,7 @@ Git: Version control.
 Bootstrap: For styles and UI components.
 
 
-## [Key Features 🔑](#key-features)
+## Key Features  🔑
 
 Interactive User Interface: Facilitates navigation and data visualization.
 Filters and Sorting: Allows users to filter by country and sort data by columns.
@@ -57,7 +57,7 @@ Interactive Map: Shows statistics by country when hovering over the map.
 (Responsiveness: Adapts to different screen sizes, ensuring usability on both mobile and desktop devices.)
 
 
-## [Installation and Execution 🚀](#installation-and-execution)
+## Installation and Execution  🚀
 
 To install and run the project locally, follow these steps:
 
@@ -87,7 +87,7 @@ bash
 Copiar código
 npm run dev
 
-## [Contributors ✒️](#contributors)
+## Contributors ✒️
 
 The following team of developers has contributed to the development of the "COVID Tracker Dashboard." Their efforts and dedication have been essential in bringing this project to fruition:
 
