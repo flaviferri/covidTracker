@@ -1,0 +1,8 @@
+$background-color_1: #e9f5fe;
+
+.symptom-section {
+	background-color: $background-color_1;
+	.symptom-cards { display: flex;
+  justify-content: center;
+}
+}
