@@ -23,12 +23,12 @@ export default function Tracker2Comp() {
     }
 
      return (
-        <div>
-            <div>
+        <div className="tr2Table">
+            <div className="title">
                 <h3>Ajax Data Table - Covid-19 Country Wise State</h3>
             </div>
-            <div style={{display:"flex", justifyContent:"right"}}>
-                <label htmlFor="search">Search:</label>
+            <div className="searchField">
+                <label htmlFor="search" className="searchLabel">Search: </label>
                 <input type="text" id="search" onChange={handleFilter}></input>
             </div>
             <DataTable
