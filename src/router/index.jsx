@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
 import Tracker1 from "../pages/Tracker1";
