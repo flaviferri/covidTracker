@@ -37,6 +37,8 @@ export default function Tracker2Comp() {
             pagination
             defaultSortFieldId="cases"
             defaultSortAsc={false}
+            striped
+            highlightOnHover
             
             />
         </div>
