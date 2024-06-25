@@ -3,6 +3,7 @@ import "./carddata.scss"
 import React from 'react'
 
 const CardData = () => {
+    
   return (
     <div className="carddata">
         <div className="individualcard">

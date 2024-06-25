@@ -4,6 +4,7 @@ import SelectData from "../components/tracker1/SelectData";
 import Worldmap from "../components/tracker1/Worldmap";
 
 const Tracker1 = () =>{
+    
     return(
         <article>
         <SelectData />
