@@ -1,6 +1,44 @@
 @use "../../styles/variables.scss" as v;
 
 * {
-    font-family: v.$font;
-    color: v.$text-color-blue;
+    font-family: v.$font;;
 }
+
+h3 {
+    color: v.$text-color-darkBlue;
+}
+
+.tr2Table {
+    padding: 1rem;
+    background-color: v.$background-color;
+    
+    .title, .searchField {
+        background-color: white;
+    }
+    
+    .title {
+        padding: 0.2rem 0.8rem;
+        border-bottom: 1px solid v.$border-grey;
+    }
+    
+    .searchField {
+        display: flex;
+        justify-content: right;
+        padding: 0.8rem 0.8rem;
+    }
+
+    #search {
+        height: 1.5rem;
+        width: 6rem;
+        padding-left: 2rem;
+        color: v.$border-grey;
+    }
+
+    .searchLabel {
+        align-self: center;
+    }
+}
+
+
+
+//style={{display:"flex", justifyContent:"right"}}
