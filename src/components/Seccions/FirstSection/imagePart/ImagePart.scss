@@ -1,0 +1,15 @@
+/*.image-part {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 20%;
+  img { max-width: 800px; 
+      height: 600px; 
+  }
+}*/
+
+.image-part img {
+  max-width: 100%; // Ajustado para que la imagen sea responsive
+  height: auto; // Ajustado para que la imagen mantenga la proporción
+  border-radius: 5px;
+}
