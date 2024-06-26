@@ -1,10 +1,10 @@
 import React from 'react';
-import CovidTable from '../components/covidTable/CovidTable';
+import CovidTableTop10 from '../components/tracker3/CovidTableTop10';
 
 const Tracker3 = () => {
   return (
     <>
-      <CovidTable /> 
+      <CovidTableTop10 /> 
     </>
   );
 };

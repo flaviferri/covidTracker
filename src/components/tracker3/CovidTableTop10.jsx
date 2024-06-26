@@ -1,17 +1,8 @@
 import React from 'react';
 import useApi from '../../services/useApi';
-import './CovidTable.scss';
+import './covidTableTop10.scss';
 
-const categoryHeaders = {
-  cases: "Top Cases",
-  todayCases: "Today Cases",
-  todayDeaths: "Today Deaths",
-  active: "Top Active",
-  critical: "Top Critical",
-  recovered: "Top Recover"
-};
-
-const CovidTable = () => {
+const CovidTableTop10 = () => {
   const { data } = useApi('https://disease.sh/v3/covid-19/countries');
 
   const getTop10 = (key) => {
@@ -19,7 +10,7 @@ const CovidTable = () => {
   };
 
   if (!data) {
-    return <div>La informacion se está cargando...</div>;
+    return <div>Cargando...</div>;
   }
 
   const categories = ["cases", "todayCases", "todayDeaths", "active", "critical", "recovered"];
@@ -36,28 +27,32 @@ const CovidTable = () => {
 
   return (
     <div>
-      <h1>Top 10 Country wise Covid-19 Updates - Tiles</h1>
+      <h2>Top 10 Country wise Covid-19 Updates - Tiles</h2>
       <table  className="table">
         <thead>
           <tr>
               {categories.map(category => (
-              <th key={category}>{categoryHeaders[category]}</th> //personalizacion de las categorias
+              <th key={category}>{categoryHeaders[category]}</th> 
             ))}
           </tr>
         </thead>
         <tbody>
-          {top10Data[0].map((country, index) => (
-            <tr key={country.country}>
-                {categories.map(category => {
-                const data = top10Data[categories.indexOf(category)][index];
+        {[...Array(10)].map((_, rowIndex) => (
+            <tr key={rowIndex}>
+              {categories.map(category => {
+                const countrydata = top10Data[categories.indexOf(category)][rowIndex];
                 return (
                   <td key={category}>
-                    <img src={data.countryInfo.flag} alt={`Flag of ${data.country}`} style={{ width: '30px', marginRight: '10px' }} />
-                    <span className="country-name">{data.country}</span>
-                    <span className="country-value">{data[category]}</span>
+                    <div className="country-flag-info">
+                    <img src={countrydata.countryInfo.flag} alt={`Flag of ${countrydata.country}`} />
+                    <div className="country-info">
+                      <span className="country-name">{countrydata.country}</span>
+                      <span className="country-value">{countrydata[category]}</span>
+                    </div>
+                    </div>
                   </td>
                 );
-                })}
+              })}
             </tr>
           ))}
         </tbody>
@@ -66,4 +61,4 @@ const CovidTable = () => {
   );
 };
 
-export default CovidTable;
+export default CovidTableTop10;

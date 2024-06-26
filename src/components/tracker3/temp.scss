@@ -1,0 +1,58 @@
+h2 {
+    color:#121158;
+  }
+  .table {
+      width: 100%;
+      border-collapse: collapse;
+      color:#121158;
+    
+      th, td {
+        width: 130px;
+        height: 60px;
+        padding: 10px;
+        //text-align: center;
+        border-bottom: 1px solid #ddd;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          //vertical-align:middle;
+          border-radius: 50%; 
+          object-fit: cover;       
+        }
+        td{
+          display: flex;
+          justify-content: space-between;
+          .country-flag {
+            align-items: flex-start;
+          }
+     
+          .coutry-info {
+            display: flex;
+           flex-direction: column;
+           .country-name {
+            font-size: 12px;
+            display: block;
+           // text-align: right;
+           align-items: flex-end;
+          }
+           .country-value {
+            font-weight: bold;
+            font-size: 16px;
+            color: #121158; 
+           // text-align: right;
+           align-content: flex-end;
+          }
+          }
+        }
+       
+                 
+        
+      }
+    
+      tr:hover td {
+          background-color: #f1f1f1;
+          transform: scale(1.05); 
+          transition: transform 0.2s ease-in-out; 
+        }
+    }
