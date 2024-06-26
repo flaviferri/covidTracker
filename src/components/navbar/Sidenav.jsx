@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './sidenav.scss'
 import { TfiLayoutGrid2,TfiPieChart,TfiViewList, TfiLayoutTab, TfiLayersAlt, TfiStatsUp, TfiWorld, TfiComment, TfiFlickrAlt } from "react-icons/tfi";
 

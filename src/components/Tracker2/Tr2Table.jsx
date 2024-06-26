@@ -1,4 +1,5 @@
 import React from 'react';
+import './Tr2Table.scss';
 
 const column = [
     {
