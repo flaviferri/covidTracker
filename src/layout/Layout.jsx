@@ -34,9 +34,10 @@ import Sidenav from "../components/navbar/Sidenav"
 
 const Layout = () => {
     return (
-        <>  
-            <Sidenav />
+        <>
+            <Sidenav/>
             <main><Outlet /></main>
+            <footer>Footer</footer>
         </>
     )
 }

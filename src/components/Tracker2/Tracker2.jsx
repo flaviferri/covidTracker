@@ -1,10 +1,10 @@
+//import axios from "axios"
 import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import useApi from "../../services/useApi";
 import column from "./Tr2Table";
-import './tracker2Comp.scss';
 
-export default function Tracker2Comp() {
+export default function Tracker2() {
     const { data: apiData, error } = useApi('https://disease.sh/v3/covid-19/countries');
     const [records, setRecords] = useState([]);
     const [filterRecords, setFilterRecords] = useState([]);
@@ -23,22 +23,20 @@ export default function Tracker2Comp() {
     }
 
      return (
-        <div className="tr2Table">
-            <div className="title">
+        <div>
+            <div>
                 <h3>Ajax Data Table - Covid-19 Country Wise State</h3>
             </div>
-            <div className="searchField">
-                <label htmlFor="search" className="searchLabel">Search: </label>
+            <div style={{display:"flex", justifyContent:"right"}}>
+                <label htmlFor="search">Search:</label>
                 <input type="text" id="search" onChange={handleFilter}></input>
             </div>
             <DataTable
             columns={column}
             data={records} 
             pagination
-            defaultSortFieldId="cases"
+            defaultSortField="cases"
             defaultSortAsc={false}
-            striped
-            highlightOnHover
             
             />
         </div>
