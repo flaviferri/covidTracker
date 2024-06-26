@@ -1,7 +1,6 @@
 import React from 'react';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { NavLink } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import './sidenav.scss'
 import { TfiLayoutGrid2,TfiPieChart,TfiViewList, TfiLayoutTab, TfiLayersAlt, TfiStatsUp, TfiWorld, TfiComment, TfiFlickrAlt } from "react-icons/tfi";
 
@@ -11,7 +10,7 @@ const Sidenav = () => {
   return (
     <Sidebar collapsed={collapsed}>
       <Menu>
-        <MenuItem component={<NavLink to="/home" activeclassname="active" />} className='navbar'><img src='../../../public/images/coronavirus.png' activeclassname="active" /></MenuItem>
+        <MenuItem component={<NavLink to="/home" activeclassname="active" />} className='navbar'><img src='../../../public/images/coronavirus.png'/></MenuItem>
         <MenuItem component={<NavLink to="/tracker1" activeclassname="active" />} className='navbar' > <TfiPieChart /></MenuItem>
         <MenuItem component={<NavLink to="/tracker2" activeclassname="active" />} className='navbar' > <TfiViewList /></MenuItem>
         <MenuItem component={<NavLink to="/tracker3" activeclassname="active" />} className='navbar' > <TfiLayoutGrid2 /></MenuItem>

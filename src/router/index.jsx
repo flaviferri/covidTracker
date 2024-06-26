@@ -26,9 +26,6 @@ export const router = createBrowserRouter([
                 path: "/tracker3",
                 element: <Tracker3/>
             }  
-      ]
-  },
-            }  
-      ]
-  },
+        ]
+    },
 ])
