@@ -1,4 +1,5 @@
 @use "./styles/variables.scss" as v;
+
 #root{
     width: 100%;
     display: flex;
@@ -7,15 +8,8 @@ body{
     font-family: v.$font;
     margin: 0px;
 }
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(359deg);
-    }
-    margin: 0px;
+main{
+    width: 100%;
 }
 @keyframes rotate {
     from {
@@ -25,4 +19,9 @@ body{
     to {
         transform: rotate(359deg);
     }
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    //margin: 0px;
 }
