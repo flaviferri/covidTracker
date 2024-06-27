@@ -1,0 +1,46 @@
+@use "../../styles/variables.scss" as v;
+
+* {
+    font-family: v.$font;
+}
+
+h3 {
+    color: v.$text-color-darkBlue;
+}
+
+.tr2Table {
+    padding: 1rem;
+    background-color: v.$background-color;
+    
+    .title, .searchField {
+        background-color: white;
+    }
+    
+    .title {
+        padding: 0.2rem 0.8rem;
+        border-bottom: 1px solid v.$border-grey;
+    }
+    
+    .searchField {
+        display: flex;
+        justify-content: right;
+        padding: 0.8rem 0.8rem;
+    }
+
+    #search {
+        height: 2rem;
+        width: 7rem;
+        //border-color: v.$border-grey;
+        margin-left: 1rem;
+    }
+
+    .searchLabel {
+        align-self: center;
+    }
+
+    .sorted {
+        background-color: #E4E6F6 !important;
+    }
+}
+
+//style={{display:"flex", justifyContent:"right"}}

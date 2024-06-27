@@ -1,0 +1,17 @@
+@use "../../styles/variables.scss" as v;
+
+.rdt_TableHeadRow {
+    font-weight: bold;
+    color: v.$text-color-darkBlue;
+}
+
+.rdt_TableCell {
+    color: v.$text-color-light;
+}
+
+.rdt_TableCol div:first-child {
+    //width:6rem;
+    width: max-content;
+    white-space: normal !important;
+    overflow: visible !important;
+}
