@@ -22,16 +22,13 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "tracker1",
-                path: "tracker1",
                 element: <Tracker1/>
             },
             {
                 path: "tracker2",
-                path: "tracker2",
                 element: <Tracker2/>
             },
             {
-                path: "tracker3",
                 path: "tracker3",
                 element: <Tracker3/>
             }  
