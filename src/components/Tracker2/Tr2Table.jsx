@@ -25,7 +25,7 @@ const column = [
         id: "newCases",
         name: "New Cases",
         selector : row => row.todayCases,
-        sortable: true
+        sortable: true,
     },
     {
         id: "deaths",
@@ -58,7 +58,7 @@ const column = [
         sortable: true
     },
     {
-        id: "critical",
+        id: "tested",
         name: "Tested",
         selector : row => row.tests,
         sortable: true
