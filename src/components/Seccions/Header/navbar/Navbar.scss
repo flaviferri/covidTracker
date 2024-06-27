@@ -1,120 +1,155 @@
 $color_1: #ddd;
 $font-family_1: "Poppins", sans-serif;
 $background-color_1: transparent;
+$mobile-background-color: white;
+$navbar-padding: 5px 10px;
 
 .navbar {
-	background-color: $background-color_1;
-	padding: 5px 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 70px;
-	font-family: $font-family_1;
-	font-size: 16px;
-}
-.navbar-logo {
-	margin-right: 400px;
-	display: flex;
-	width: 50px;
-	height: auto;
-}
-.navLinks {
-	list-style: none;
-	display: flex;
-	gap: 40px;
-	margin: 0;
-	padding: 0;
-	font-family: $font-family_1;
-	 li { display: flex;
-	 align-items: center;
-	 vertical-align: middle;
-	  a { color: white;
-	  text-decoration: none;
-	  font-size: 16px;
+  padding: $navbar-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  font-family: $font-family_1;
+  font-size: 16px;
+  width: 100%;
+  position: fixed; // Cambiado a fixed para que la navbar esté fija en la parte superior
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; // Asegura que la navbar esté por encima de otros contenidos
+  transition: background-color 0.3s ease, color 0.3s ease; // Añade una transición suave
+  box-shadow: none;
+
+  &.scrolled {
+    background-color: white; // Cambia el color de fondo al hacer scroll
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Añade una sombra si lo deseas
+
+    .navLinks li a {
+      color: black; // Cambia el color del texto
+    }
+
+    .hamburger-lines {
+      background-color: black; // Cambia el color de las líneas del menú hamburguesa
+    }
+
+    .navbar-logo img {
+      filter: none; // Invertir el color del logo si es necesario
+    }
   }
- }
+
+  .navbar-logo {
+    display: flex;
+    width: 150px;
+    height: 30px;
+    margin-left: 120px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family_1;
+    margin-right: 200px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+          color: black;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $mobile-background-color;
+    height: auto;
+    padding: 10px;
+
+    .navbar-logo {
+      margin: 10px 0 0 80px;
+    }
+
+    .navLinks {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      background-color: $mobile-background-color;
+      padding: 0;
+      width: calc(80% - 80px);
+      margin-left: 90px;
+
+      li {
+        width: 100%;
+        padding: 8px;
+        border-bottom: 1px solid $color_1;
+
+        a {
+          color: black;
+          text-decoration: none;
+          font-size: 16px;
+          width: 100%;
+          display: block;
+
+          &.active {
+            display: flex;
+          }
+        }
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.expanded {
+      .navLinks {
+      display: flex;
+    }
+  }
+}
 }
 
-/*$color_1: #ddd;
-$font-family_1: "Poppins", sans-serif;
-$background-color_1: transparent;
+.hamburger {
+  display: none;
 
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	background-color: $background-color_1;
-	color: white;
-
-	.navbar-logo {
-	  img {
-		margin-right: 400px;
-		display: flex;
-		width: 150px;
-		height: 30px;
-	  }
-	}
-
-	.menu-icon {
-	  display: none; // Ocultar por defecto en pantallas grandes
-	  cursor: pointer;
-  
-	  .menu-line {
-		width: 25px;
-		height: 2px;
-		background-color: white;
-		margin: 4px 0;
-	  }
-	}
-  
-	.navLinks {
-	  list-style: none;
-	  display: flex;
-	  gap: 20px;
-  
-	  li {
-		a {
-		  color: white;
-		  text-decoration: none;
-		  font-size: 16px;
-		  transition: color 0.3s;
-  
-		  &:hover {
-			color: #ddd;
-		  }
-		}
-	  }
-	}
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: -10px 0 10px auto;
+    margin-right: 120px;
+    margin-top: -40px;
+    flex-direction: column;
+  }
 }
-  
-	@media (max-width: 768px) {
-	  .menu-icon {
-		display: block; // Mostrar en dispositivos móviles
-	  }
-  
-	  .navLinks {
-		position: absolute;
-		top: 70px;
-		left: 0;
-		width: 100%;
-		background-color: #333;
-		padding: 20px;
-		flex-direction: column;
-		gap: 10px;
-		text-align: center;
-		transition: transform 0.3s ease-in-out;
-		transform: translateY(-100%);
-		z-index: -1;
-  
-		&.open {
-		  transform: translateY(0);
-		  z-index: 1;
-		}
-  
-		li {
-		  margin-bottom: 10px;
-		}
-	  }
-	}*/
-  
+
+.hamburger-lines {
+  width: 25px;
+  height: 2px;
+  background-color: grey;
+  margin: 3px 0;
+}
+

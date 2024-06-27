@@ -1,14 +1,12 @@
 import React from 'react';
-import './ImagePart.scss';
+import '../imagePart/ImagePart.scss';
 
 const ImagePart = () => {
   return (
     <div className="image-part">
-      <img src="/src/assets/images/imagentos-removebg-preview.png" alt="image"/>
+      <img src="/public/images/p-3-removebg-preview.png" alt="image"/>
     </div>
   );
 };
 
 export default ImagePart;
-
-
