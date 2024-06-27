@@ -1,8 +1,9 @@
-/*faltan imports*/
-const Homepage = () =>{
-  return(
-      <><h1>Homepage</h1></>
-  )
-};
 
-export default Homepage
+const Homepage = () => {
+  return (
+      <>
+          <h1>Home page</h1>
+      </>
+  )
+}
+export default Homepage;
