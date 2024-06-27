@@ -10,7 +10,7 @@ const Sidenav = () => {
   return (
     <Sidebar collapsed={collapsed}>
       <Menu>
-        <MenuItem component={<NavLink to="/" activeclassname="active" />} className='navbar'><img src='../../../public/images/coronavirus.png' /></MenuItem>
+        <MenuItem component={<NavLink to="/" activeclassname="active" />} className='navbar'><img src='/images/coronavirus.png' /></MenuItem>
         <MenuItem component={<NavLink to="tracker1" activeclassname="active" />} className='navbar' > <TfiPieChart /></MenuItem>
         <MenuItem component={<NavLink to="tracker2" activeclassname="active" />} className='navbar' > <TfiViewList /></MenuItem>
         <MenuItem component={<NavLink to="tracker3" activeclassname="active" />} className='navbar' > <TfiLayoutGrid2 /></MenuItem>
