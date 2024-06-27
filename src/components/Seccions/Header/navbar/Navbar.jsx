@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './Navbar.scss';
 import TrackerButton from '../trackerButton/TrackerButton';
 
@@ -39,13 +39,13 @@ const Navbar = () => {
 
   const getLogoPath = () => {
     if (isMobile && scrolled) {
-      return '/src/assets/images/logo.png';
+      return '/public/images/logo.png';
     } else if (isMobile && !scrolled) {
-      return '/src/assets/images/logo.png';
+      return '/public/images/logo.png';
     } else if (!isMobile && scrolled) {
-      return '/src/assets/images/logo.png';
+      return '/public/images/logo.png';
     } else {
-      return '/src/assets/images/logo-white.png';
+      return '/public/images/logo-white.png';
     }
   };
 
@@ -61,25 +61,26 @@ const Navbar = () => {
       </div>
       <ul className={`navLinks ${isOpen ? 'active' : ''}`}>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/prevention">Prevention</Link>
+          <NavLink to="/prevention">Prevention</NavLink>
         </li>
         <li>
-          <Link to="/quarantine">Quarantine</Link>
+          <NavLink to="/quarantine">Quarantine</NavLink>
         </li>
         <li>
-          <Link to="/pages">Pages</Link>
+          <NavLink to="/pages">Pages</NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <Link to="/help">Help</Link>
+          <NavLink to="/Help">Help</NavLink>
         </li>
-        <li>
+        <li><Link to= "/trackers">
           <TrackerButton className={scrolled ? 'scrolled' : ''} text="Tracker" />
+          </Link>
         </li>
       </ul>
     </nav>
