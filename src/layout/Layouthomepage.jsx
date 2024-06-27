@@ -1,3 +1,4 @@
+import Navbar from "../components/Seccions/Header/navbar/Navbar";
 import Homepage from "../pages/Homepage";
 import "../styles/main.scss";
 
@@ -5,7 +6,9 @@ import "../styles/main.scss";
 const Layouthomepage = () => {
     return (
         <>  
+
             <main>
+                <Navbar />
                 <Homepage />
             </main>
         </>
