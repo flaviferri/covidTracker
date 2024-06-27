@@ -1,34 +1,29 @@
-import { countriesUrl, baseUrl, allUrl } from "../config/urls";
+import {useState, useEffect} from "react"
 
-export const getCountriesData = async() =>{
-    try{
-        const response = await fetch(countriesUrl);
-        if(!response.ok){
-            throw new Error (`Error! status: ${response.status}`);
-        }
-            const jsonData = await response.json();
-            return jsonData
+
+
+const useApi = (url) =>{
+    const [data, setData] = useState(null)
+    const [error, setError] = useState(null)
+
+     useEffect(()=>{ 
+        const getData = async() =>{
+            try{
+                const response = await fetch(url);
+                if(!response.ok){
+                    throw new Error (`Error! status: ${response.status}`);
+                }
+                const json_data = await response.json();
+                setData(json_data); 
     
+            }catch(error){
+              setError(error.message);
+                console.error(`Error fetching data: ${error}`);
+            }
         }
-    catch(error){
-            console.error(`Error fetching data: ${error}`);
-            return null
-        }
-}
+        getData(url);
+    }, [url]);
+    return{data,error};
 
-export const getGeneralData = async() =>{
-    try{
-        const response = await fetch(allUrl);
-        if(!response.ok){
-            throw new Error (`Error! status: ${response.status}`);
-        }
-            const jsonData = await response.json();
-            return jsonData
-    
-        }
-    catch(error){
-            console.error(`Error fetching data: ${error}`);
-            return null
-        }
 }
-
+export default useApi;

@@ -1,9 +1,76 @@
 @use "../../styles/variables.scss" as v;
+body{
+    background-color: #f7f8fc;
+}
 .carddata{
     width: 50%;
     display: flex;
     flex-wrap: wrap;
-    .individualcard{
-        width: 45%;
+    justify-content: center;
+    gap: 20px;
+    .singlecard{
+        position: relative;
+        width: 40%;
+        overflow: hidden;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: v.$shadow;
+        h4,h3{
+            position: relative;
+            z-index: 1;
+        }
+        h4{
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        h3{
+            border-top: 1px solid v.$gray;
+            font-size: 30px;
+            margin: 10px 0 5px;
+            padding-top: 10px;
+            font-weight: 700;
+        }
+        .cardimg{
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            right: -30px;
+            top: -30px;
+            line-height: 60px;
+            color: #fff;
+            font-size: 20px;
+            opacity: 0.1;
+            img{
+                width: 100%;
+            }
+        }
+        
+    &:hover{
+        transform: scale(1.1);
+        img{
+            animation: rotate 5s linear infinite;
+        }
+    }  
     }
+}
+.data1{
+    color:v.$secondary-color;
+}
+.data2{
+    color:v.$red-font-color;
+}
+.data3{
+    color:v.$green-font-color;
+}
+.data4{
+    color:v.$blue-font-color;
+}
+.data5{
+    color:v.$orange-font-color;
+}
+.data6{
+    color:v.$redark-font-color;
 }

@@ -16,14 +16,17 @@
             }
         }
         div:last-child{
-            padding-left: 15px;
-            width: 80%;
+            //padding-left: 15px;
+            width: 70%;
             h3{
-                font-size: 30px;
+                font-size: 25px;                
+                color: v.$primary-font-color;
                 margin: 0;
             }
             h4{
-                font-size: 12px;
+                font-size: 9px;
+                font-weight: 400;
+                color: v.$primary-font-color;
                 margin: 0;
             }
         }
