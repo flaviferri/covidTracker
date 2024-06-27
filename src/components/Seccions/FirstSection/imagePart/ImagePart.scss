@@ -1,15 +1,21 @@
-/*.image-part {
+.image-part {
+  width: 40%; // Ocupa 40% del ancho en pantallas grandes
+  margin-bottom: 150px; // Espacio superior
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  margin-bottom: 20%;
-  img { max-width: 800px; 
-      height: 600px; 
-  }
-}*/
+  justify-content: center;
+  align-items: center;
 
-.image-part img {
-  max-width: 100%; // Ajustado para que la imagen sea responsive
-  height: auto; // Ajustado para que la imagen mantenga la proporción
-  border-radius: 5px;
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    margin: 10px; 
+    margin-left: 200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 70%; // Ocupa todo el ancho disponible en dispositivos móviles
+    margin-top: 20px; // Espacio entre text-part e image-part en dispositivos móviles
+    margin-left: 40px;
+  }
 }

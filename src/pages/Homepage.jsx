@@ -1,8 +1,8 @@
 import React from 'react';
-import TextPart from '../../Seccions/FirstSection/textPart/TextPart';
-import ImagePart from '../../Seccions/FirstSection/imagePart/ImagePart';
-import Navbar from '../../Seccions/Header/navbar/Navbar';
-import SymptomSection from '../../Seccions/Symptom/symptomSection/SymptomSection';
+import Navbar from '../components/Seccions/Header/navbar/Navbar';
+import TextPart from '../components/Seccions/FirstSection/textPart/TextPart';
+import ImagePart from '../components/Seccions/FirstSection/imagePart/ImagePart';
+import SymptomSection from '../components/Seccions/Symptom/symptomSection/SymptomSection';
 
 
 
@@ -16,9 +16,11 @@ const Homepage = () => {
               <TextPart />
               <ImagePart />
           </div>
-      </div><div>
+          <div>
               <SymptomSection />
-          </div></>
+          </div>
+      </div>
+    </>
       
   );
 };

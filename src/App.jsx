@@ -1,109 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-
-import { BrowserRouter as Router} from 'react-router-dom';
-import Homepage from './components/Pages/HomePage/HomePage';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Homepage from './pages/Homepage';
 
 import './styles/main.scss'; 
 
 const App = () => {
   return (
     <Router>       
-          <Homepage />      
+      <Homepage />      
     </Router>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Crear una raíz
+const root = createRoot(document.getElementById('root'));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*import Navbar from './components/Seccions/Header/Navbar/Navbar';
-import TextPart from './components/Seccions/FirstSection/TextPart/TextPart';
-import ImagePart from './components/Seccions/FirstSection/ImagePart/ImagePart';
-import SymptomSection from './components/Seccions/Symptom/SymptomSection/SymptomSection';
-
-
-
-
-
-  )
-};
-      
-    export default App;
-
-
-
-
-
-
-/*const App = () => {
-  return (
-    <Router>
-      <div style={{ backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', }}/>
-      <Navbar/>
-      <TextPart/>
-    </Router>
-  );
-};
-
-export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
-import Navbar from './components/Seccions/Header/Navbar/Navbar';
-
-const App = () => {
-  return (
-    <Router>
-      <div className='App'>
-        <Navbar/>
-      </div>
-    </Router>
-  );
-};
-
-export default App;*/
+// Renderizar la aplicación
+root.render(<App />);

@@ -1,8 +1,28 @@
 $background-color_1: #e9f5fe;
 
 .symptom-section {
-	background-color: $background-color_1;
-	.symptom-cards { display: flex;
-  justify-content: center;
+  background-color: $background-color_1;
+
+
+  .symptom-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+	
+	.card {
+		@media (max-width: 767px) {
+		  width: 100%;
+		  max-width: 300px; // Ajusta este valor según sea necesario
+		  margin: 10px ;
+		}
+	  }
+  
+
+  .card-1 {
+	@media (max-width: 767px) {
+	  display: none;
+	}
 }
+  }
 }
+

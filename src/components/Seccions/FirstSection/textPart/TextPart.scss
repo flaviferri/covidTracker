@@ -1,97 +1,73 @@
-$color_1: #fff;
 $font-family_1: "Poppins", sans-serif;
 $background-color_1: transparent;
+$text-color: #fff;
 
-/*.text-part {
+  .text-part {
 	background-color: $background-color_1;
-	width: 750px;
-	display: flex;
-	flex-direction: column;
-}
-h2 {
-	color: $color_1;
-	font-family: $font-family_1;
-	font-size: 62px;
-	font-weight: bold;
-	line-height: 1.2;
-	letter-spacing: 1px;
-	margin-bottom: 20px;
-	margin-top: 0;
-	text-align: left;
-	width: 90%;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-}
-p {
-	color: $color_1;
-	font-family: $font-family_1;
-	font-size: 19px;
-	line-height: 1.5;
-	text-align: left;
-	width: 95%;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	margin-top: 10px;
-	margin-bottom: 50px;
-}
-.flag-part {
-	img { border-radius: 5px;
-}
-}*/
+	width: 42%;
+	margin-inline-start: 50px;
+	margin-inline-end: 10px;
 
-// Estilos para la parte de texto
-.text-part {
-	background-color: $background-color_1;
-	max-width: 100%; // Ajustado para que el texto sea responsive
-	width: 100%;
-	padding: 20px; // Añadido para dar espacio alrededor del texto en dispositivos móviles
-	display: flex;
-	flex-direction: column;
-	align-items: center; // Centra el texto horizontalmente
-	text-align: center; // Centra el texto verticalmente
-  }
   
-  .text-part h2 {
-	color: $color_1;
-	font-family: $font-family_1;
-	font-size: 4.5vw; // Tamaño de fuente responsive basado en el ancho de la pantalla
-	font-weight: bold;
-	line-height: 1.2;
-	letter-spacing: 1px;
-	margin-top: 0;
-	margin-bottom: 20px;
-	max-width: 100%; // Ajustado para que el texto sea responsive
-	width: 100%;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-  }
-  
-  .text-part p {
-	color: $color_1;
-	font-family: $font-family_1;
-	font-size: 2vw; // Tamaño de fuente responsive basado en el ancho de la pantalla
-	line-height: 1.5;
-	max-width: 100%; // Ajustado para que el texto sea responsive
-	width: 100%;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	margin-top: 10px;
-	margin-bottom: 50px;
-  }
-  .flag-part {
-	img {
-	  max-width: 100%; // Ajustado para que la imagen sea responsive
-	  height: auto; // Ajustado para que la imagen mantenga la proporción
-	  border-radius: 5px;
-	  display: block; // Añadido para manejar el espacio alrededor de la imagen
-	  margin: 0 auto; // Añadido para centrar la imagen horizontalmente
+	h2 {
+	  color: $text-color;
+	  font-family: $font-family_1;
+	  font-size: 60px; 
+	  font-weight: bold;
+	  line-height: 1.2;
+	  letter-spacing: 1px;
+	  margin-top: 20px;
+	  margin-bottom: 30px;
 	}
+  
+	p {
+	  color: $text-color;
+	  font-family: $font-family_1;
+	  font-size: 1.2vw; 
+	  line-height: 1.5;
+	  margin-top: 0;
+	  margin-bottom: 20px;
+	}
+  
+	.flag-part {
+	display: flex;
+	    
+		img {
+		max-width: 100%; 
+		height: auto;
+        border-radius: 5px;
+        display: block;
+     	width: 60%;
+	  }
+	}
+  
+	@media (max-width: 768px) {
+		width: 100%; 
+		margin: 60px; 
+		margin-top: 20px;
+		margin-left: 20px;
+	
+		h2 {
+			text-align: left; 
+			margin-left: 0; 
+			font-size: 36px;
+		  }
+
+		p {
+		  text-align: left; 
+		  margin-left: 0; 
+		  font-size: 18px;
+		  max-width: 90%;
+		  margin-top: 30px;
+		}
+	
+		.flag-part {
+		  justify-content: left;
+		  margin-top: 60px;
+		  max-width: 95%;
+		  height: 90px;
+		  width: 600px;
+		}
+	  }
   }
+	
