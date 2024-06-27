@@ -1,0 +1,8 @@
+@use "../../styles/variables.scss" as v;
+.worldmap{
+    width: 50%;
+    figure{
+        margin: 10px;
+        width: 500px;
+    }
+}
