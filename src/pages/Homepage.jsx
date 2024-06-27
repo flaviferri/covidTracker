@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Seccions/Header/navbar/Navbar';
 import TextPart from '../components/Seccions/FirstSection/textPart/TextPart';
 import ImagePart from '../components/Seccions/FirstSection/imagePart/ImagePart';
 import SymptomSection from '../components/Seccions/Symptom/symptomSection/SymptomSection';
