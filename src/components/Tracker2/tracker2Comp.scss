@@ -1,7 +1,7 @@
 @use "../../styles/variables.scss" as v;
 
 * {
-    font-family: v.$font;;
+    font-family: v.$font;
 }
 
 h3 {
@@ -28,17 +28,19 @@ h3 {
     }
 
     #search {
-        height: 1.5rem;
-        width: 6rem;
-        padding-left: 2rem;
-        color: v.$border-grey;
+        height: 2rem;
+        width: 7rem;
+        //border-color: v.$border-grey;
+        margin-left: 1rem;
     }
 
     .searchLabel {
         align-self: center;
     }
+
+    .sorted {
+        background-color: #E4E6F6 !important;
+    }
 }
-
-
 
 //style={{display:"flex", justifyContent:"right"}}
