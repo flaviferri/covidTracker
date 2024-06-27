@@ -1,12 +1,39 @@
 import {useState, useEffect} from "react"
+import axios from 'axios'
 
 
 
-const useApi = (url) =>{
+const UseApi = (url) =>{
     const [data, setData] = useState(null)
     //const [error, setError] = useState(null)
 
-     useEffect(()=>{ 
+    useEffect(()=>{ 
+        const getData = async() =>{
+            try{
+                const response = await axios.get(url);
+                if(response.status !== 200){
+                    throw new Error (`Error! status: ${response.status}`);
+                }
+                setData(response.data); 
+    
+            }catch(error){
+            setError(error.message);
+                console.error(`Error fetching data: ${error}`);
+            }
+        }
+        getData(url);
+    }, [url]);
+    return{data,error};
+
+}
+export default UseApi; 
+
+/* const UseApi = (url) =>{
+    const [data, setData] = useState(null)
+    const [error, setError] = useState(null)
+
+    useEffect(()=>{ 
+    useEffect(()=>{ 
         const getData = async() =>{
             try{
                 const response = await fetch(url);
@@ -17,7 +44,9 @@ const useApi = (url) =>{
                 setData(json_data); 
     
             }catch(error){
-             // setError(error.message);
+
+            setError(error.message);
+            setError(error.message);
                 console.error(`Error fetching data: ${error}`);
             }
         }
@@ -26,4 +55,5 @@ const useApi = (url) =>{
     return{data}; // return{data,error};
 
 }
-export default useApi;
+export default UseApi; 
+ */
