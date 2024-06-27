@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const UseApi = (url) =>{
     const [data, setData] = useState(null)
-    //const [error, setError] = useState(null)
+    const [error, setError] = useState(null)
 
     useEffect(()=>{ 
         const getData = async() =>{
@@ -23,6 +23,7 @@ const UseApi = (url) =>{
         }
         getData(url);
     }, [url]);
+
     return{data,error};
 
 }
@@ -32,6 +33,7 @@ export default UseApi;
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
 
+<<<<<<< HEAD
     useEffect(()=>{ 
     useEffect(()=>{ 
         const getData = async() =>{
@@ -52,7 +54,7 @@ export default UseApi;
         }
         getData(url);
     }, [url]);
-    return{data}; // return{data,error};
+    return{data,error};
 
 }
 export default UseApi; 
