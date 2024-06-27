@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const UseApi = (url) =>{
     const [data, setData] = useState(null)
-    //const [error, setError] = useState(null)
+    const [error, setError] = useState(null)
 
     useEffect(()=>{ 
         const getData = async() =>{
