@@ -78,7 +78,7 @@ const NavbarHome = () => {
         <li>
           <NavLink to="/Help">Help</NavLink>
         </li>
-        <li><Link to= "/trackers">
+        <li><Link to= "/trackers/tracker1">
           <TrackerButton className={scrolled ? 'scrolled' : ''} text="Tracker" />
           </Link>
         </li>
