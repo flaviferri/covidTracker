@@ -7,7 +7,7 @@ const TrackerButton = ({ className, text }) => {
 
   return (
     <div className={`tracker-button ${className ? className : ''} ${isHighlighted ? 'highlighted' : ''}`}>
-      <NavLink to="/trackers"
+      <NavLink to="/trackers/tracker1"
             onMouseEnter={() => setIsHighlighted(true)} 
             onMouseLeave={() => setIsHighlighted(false)}
             className={className} 
