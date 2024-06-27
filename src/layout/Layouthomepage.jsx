@@ -1,15 +1,15 @@
-//import { Link, Outlet} from "react-router-dom"
-//import Sidenav from "../components/navbar/Sidenav"
-
-import { Link } from "react-router-dom";
 import Homepage from "../pages/Homepage";
-const LayoutHome = () => {
+import "../styles/main.scss";
+
+
+const Layouthomepage = () => {
     return (
         <>  
-            <nav><Link to="/trackers">Tracker</Link></nav>
-            <main><Homepage /></main>
+            <main>
+                <Homepage />
+            </main>
         </>
     )
 }
 
-export default LayoutHome
+export default Layouthomepage;

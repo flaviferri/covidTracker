@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet} from "react-router-dom"
 import Navbar from '../components/Seccions/Header/navbar/Navbar';
 import TextPart from '../components/Seccions/FirstSection/textPart/TextPart';
 import ImagePart from '../components/Seccions/FirstSection/imagePart/ImagePart';
@@ -12,6 +13,7 @@ const Homepage = () => {
   return (
     <><div className='background'>
           <Navbar />
+          <div><Outlet/></div>
           <div className='content'>
               <TextPart />
               <ImagePart />
@@ -19,6 +21,7 @@ const Homepage = () => {
           <div>
               <SymptomSection />
           </div>
+        
       </div>
     </>
       
