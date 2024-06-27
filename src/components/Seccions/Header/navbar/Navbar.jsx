@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import './Navbar.scss';
 import TrackerButton from '../trackerButton/TrackerButton';
 
-const Navbar = () => {
+const NavbarHome = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [scrolled, setScrolled] = useState(false);
@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isOpen ? 'expanded' : ''}`}>
+    <nav className={`navbarhome ${scrolled ? 'scrolled' : ''} ${isOpen ? 'expanded' : ''}`}>
       <div className="navbar-logo">
         <img src={getLogoPath()} alt="LogoCovid" />
       </div>
@@ -87,5 +87,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarHome;
 
