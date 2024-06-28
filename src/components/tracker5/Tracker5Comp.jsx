@@ -1,3 +1,4 @@
+import './tracker5Comp.scss';
 import React, { useState, useEffect } from "react";
 import useApi from "../../services/useApi";
 import { groupCountries_dates } from "../../config/urls";
@@ -9,45 +10,49 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 
 const processCountryData = (data) => {
     const chartData = {};
-    const countries = Object.keys(data);
+    
 
-    countries.forEach(country => {
-        const countryData = data[country].timeline;
+    data.forEach(countryData => {
+        const countryName = countryData.country;
+        const timeline = countryData.timeline;
         const cases = [];
         const deaths = [];
         const recoveries = [];
         const labels = [];
 
-        Object.keys(countryData.cases).forEach(date => {
+        Object.keys(timeline.cases).forEach(date => {
             const [month, day, year] = date.split('/');
             if (month === '10' && year === '20') {
                 labels.push(date);
-                cases.push(countryData.cases[date]);
-                deaths.push(countryData.deaths[date]);
-                recoveries.push(countryData.recovered[date]);
+                cases.push(timeline.cases[date]);
+                deaths.push(timeline.deaths[date]);
+                recoveries.push(timeline.recovered[date]);
             }
         });
 
-        chartData[country] = {
+        chartData[countryName] = {
             labels,
             datasets: [
                 {
                     label: 'Confirmed',
                     data: cases,
-                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderColor: '#3639AE',
                     fill: false,
+                    pointStyle: 'circle',
                 },
                 {
                     label: 'Death',
                     data: deaths,
-                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderColor: '#ff0000',
                     fill: false,
+                    pointStyle: 'circle',
                 },
                 {
                     label: 'Recovered',
                     data: recoveries,
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: '#82c519',
                     fill: false,
+                    pointStyle: 'circle',
                 },
             ],
             options: {
@@ -88,11 +93,11 @@ const Tracker5Comp = () => {
     
   
     return (
-        <div>
-            {Object.keys(chartData).map((country, index) => (
-                <div key={index}>
-                    <h2>{country.toUpperCase()}</h2>
-                    <Line data={chartData[country]} />
+        <div className="tracker5-container">
+            {Object.entries(chartData).map(([countryName, data], index) => (
+                <div key={index} className='chart-container'>
+                    <h2 className='chart-title'>{countryName.toUpperCase()}</h2>
+                    <Line data={data} />
                 </div>
             ))}
         </div>
