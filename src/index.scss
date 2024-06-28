@@ -28,3 +28,42 @@ article{
     flex-wrap: wrap;
     //margin: 0px;
 }
+.error{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    margin-top: 50px;
+    img{
+        width: 500px;
+    }
+    h1{
+        width: 100%;
+        text-align: center;
+    }
+    p{
+        width: 100%;
+        text-align: center;
+    }
+    a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        .buttonError{
+            width: 40%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: v.$primary-color;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            &:hover{
+                scale: 1.1;
+                background-color: v.$secondary-color;
+            }
+        }
+        
+    }
+    
+}
