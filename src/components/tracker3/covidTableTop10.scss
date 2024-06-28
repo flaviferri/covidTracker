@@ -7,24 +7,27 @@ body{
 .covid-table {
   width: 100%;
   color: v.$primary-color;
+  height: 100vh;
+  overflow: scroll;
 
   h2 {
-    margin-left: 35px;
-  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
   color:v.$primary-color;
   border-color: #000000; 
   font-size: 20px;
+  font-weight: bold;
   }
 
   .grid-container {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 0 10px;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(124.5px, 1fr));
     border-top: 1px solid v.$border-grey;
   }
 
   .grid-item {
-    padding: 10px;
     background-color: transparent;
 
     h3 {
@@ -46,7 +49,7 @@ body{
 
       &:hover {
         background-color: v.$background-td-color;
-        transform: scale(1.1);
+        transform: scale(1.07);
       }
 
       img {
@@ -63,12 +66,12 @@ body{
 
         .country-name {
           font-size: 12px;
-          font-weight: bold;
+          font-weight: 400;
           margin-bottom: -5px;
         }
 
         .country-value {
-          font-size: 18px;
+          font-size: 17px;
           font-weight: bold;
           color: v.$primary-color;
         }
