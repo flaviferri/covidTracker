@@ -37,6 +37,7 @@ const processCountryData = (data) => {
                     label: 'Confirmed',
                     data: cases,
                     borderColor: '#3639AE',
+                    backgroundColor: '#3639AE',
                     fill: false,
                     pointStyle: 'circle',
                 },
@@ -44,6 +45,7 @@ const processCountryData = (data) => {
                     label: 'Death',
                     data: deaths,
                     borderColor: '#ff0000',
+                    backgroundColor: '#ff0000',
                     fill: false,
                     pointStyle: 'circle',
                 },
@@ -51,19 +53,12 @@ const processCountryData = (data) => {
                     label: 'Recovered',
                     data: recoveries,
                     borderColor: '#82c519',
+                    backgroundColor: '#82c519',
                     fill: false,
                     pointStyle: 'circle',
                 },
             ],
-            options: {
-                plugins: {
-                    legend: {
-                        labels: {
-                            usePointStyle: true, 
-                        },
-                    },
-                },
-            },
+            
         };
     });
 
@@ -91,13 +86,23 @@ const Tracker5Comp = () => {
         return <div>Loading...</div>;
     }
     
+    const options = {
+        plugins: {
+            legend: {
+                display: true,
+                labels: {
+                    usePointStyle: true, 
+                },
+            },
+        },
+    };
   
     return (
         <div className="tracker5-container">
             {Object.entries(chartData).map(([countryName, data], index) => (
                 <div key={index} className='chart-container'>
-                    <h2 className='chart-title'>{countryName.toUpperCase()}</h2>
-                    <Line data={data} />
+                    <h2 className='chart-title'>{countryName}</h2>
+                    <Line data={data} options={options} />
                 </div>
             ))}
         </div>
