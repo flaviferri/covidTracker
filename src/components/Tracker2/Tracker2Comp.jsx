@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import useApi from "../../services/useApi";
+import { countries_url } from "../../config/urls";
 import column from "./Tr2Table";
 import './tracker2Comp.scss';
 
 
 export default function Tracker2Comp() {
-    const { data: apiData, error } = useApi('https://disease.sh/v3/covid-19/countries');
+    const { data: apiData, error } = useApi(countries_url);
     const [records, setRecords] = useState([]);
     const [filterRecords, setFilterRecords] = useState([]);
  
@@ -16,6 +17,12 @@ export default function Tracker2Comp() {
             setFilterRecords(apiData);
         }
     }, [apiData]);
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+    if (!apiData || !Object.keys(records).length) {
+        return <div>Loading...</div>;
+    }
 
     const handleFilter = (event) => {
         const newData = filterRecords.filter(row => row.country.toLowerCase().includes(event.target.value.toLowerCase()))
