@@ -7,12 +7,12 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     .singlecard{
         position: relative;
-        width: 40%;
+        width: 45%;
         overflow: hidden;
-        padding: 10px;
+        padding: 10px 10px 0px;
         margin-bottom: 10px;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.8);
@@ -49,7 +49,7 @@ body{
         }
         
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         img{
             animation: rotate 5s linear infinite;
         }
