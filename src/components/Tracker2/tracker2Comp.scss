@@ -8,9 +8,10 @@ h3 {
     color: v.$primary-font-color;
 }
 
-.tr2Table {
-    padding: 1rem;
+.tr2Table-container {
+    padding: 10px;
     background-color: v.$background-color;
+    width:100%;
     
     .title, .searchField {
         background-color: white;
@@ -41,6 +42,8 @@ h3 {
     .sorted {
         background-color: #E4E6F6 !important;
     }
-}
 
-//style={{display:"flex", justifyContent:"right"}}
+    .dataTable {
+        width: 100%;
+    }
+}
