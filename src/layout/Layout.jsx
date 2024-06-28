@@ -12,7 +12,9 @@ const Layout = () => {
             <TrackerCovid/>
             <TrackerTop10/>
             </div>
-            <main><Outlet /></main>
+            <section className="outlet">
+            <Outlet />
+            </section>
         </>
     )
 }
