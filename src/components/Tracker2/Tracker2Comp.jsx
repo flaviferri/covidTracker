@@ -23,7 +23,7 @@ export default function Tracker2Comp() {
     };
 
      return (
-        <div className="tr2Table">
+        <div className="tr2Table-container">
             <div className="title">
                 <h3>Ajax Data Table - Covid-19 Country Wise State</h3>
             </div>
@@ -31,16 +31,18 @@ export default function Tracker2Comp() {
                 <label htmlFor="search" className="searchLabel">Search:</label>
                 <input type="text" id="search" onChange={handleFilter}></input>
             </div>
-            <DataTable
-                columns={column}
-                data={records} 
-                pagination
-                defaultSortFieldId="cases"
-                defaultSortAsc={false}
-                striped
-                highlightOnHover
-                responsive
-            />
+            <div className="dataTable">
+                <DataTable
+                    columns={column}
+                    data={records} 
+                    pagination
+                    defaultSortFieldId="cases"
+                    defaultSortAsc={false}
+                    striped
+                    highlightOnHover
+                    responsive
+                />
+            </div>
         </div>
     );
 }

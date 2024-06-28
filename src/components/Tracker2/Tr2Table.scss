@@ -1,12 +1,18 @@
 @use "../../styles/variables.scss" as v;
 
+.rdt_Table {
+    overflow: scroll;
+}
+
 .rdt_TableHeadRow {
     font-weight: bold;
+    font-size: 1rem;
     color: v.$primary-font-color;
 }
 
 .rdt_TableCell {
     color: v.$violet-font-color;
+    font-size: 1rem;
 }
 
 .rdt_TableCol div:first-child {
@@ -15,3 +21,4 @@
     white-space: normal !important;
     overflow: visible !important;
 }
+
