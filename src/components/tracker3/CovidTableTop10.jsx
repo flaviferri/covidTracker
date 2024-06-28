@@ -2,63 +2,48 @@ import React from 'react';
 import useApi from '../../services/useApi';
 import './covidTableTop10.scss';
 
+const categories = [
+  { key: "cases", label: "Top Cases" },
+  { key: "todayCases", label: "Today Cases" },
+  { key: "todayDeaths", label: "Today Deaths" },
+  { key: "active", label: "Top Active" },
+  { key: "critical", label: "Top Critical" },
+  { key: "recovered", label: "Top Recover" }
+];
+
+
 const CovidTableTop10 = () => {
   const { data } = useApi('https://disease.sh/v3/covid-19/countries');
 
-  const getTop10 = (key) => {
-    return data ? [...data].sort((a, b) => b[key] - a[key]).slice(0, 10) : [];
-  };
+  if (!data) return <p>Loading...</p>;
 
-  if (!data) {
-    return <div>Cargando...</div>;
-  }
-
-  const categories = ["cases", "todayCases", "todayDeaths", "active", "critical", "recovered"];
-  const categoryHeaders = {
-    cases: "Top Cases",
-    todayCases: "Today Cases",
-    todayDeaths: "Today Deaths",
-    active: "Top Active",
-    critical: "Top Critical",
-    recovered: "Top Recover"
-  };
-
-  const top10Data = categories.map(category => getTop10(category));
+  const top10ByCategory = categories.map(category => ({
+    category: category.label,
+    countries: data
+      .sort((a, b) => b[category.key] - a[category.key])
+      .slice(0, 10)
+  }));
 
   return (
-    <div>
+    <div className="covid-table">
       <h2>Top 10 Country wise Covid-19 Updates - Tiles</h2>
-      <table  className="table">
-        <thead>
-          <tr>
-              {categories.map(category => (
-              <th key={category}>{categoryHeaders[category]}</th> 
+      <div className="grid-container">
+        {top10ByCategory.map((item, index) => (
+          <div key={index} className="grid-item">
+            <h3>{item.category}</h3>
+            {item.countries.map((countryData, idx) => (
+              <div key={idx} className="country-data">
+                <img src={countryData.countryInfo.flag} alt={`Flag of ${countryData.country}`} />
+                <div className="country-info">
+                  <span className="country-name">{countryData.country}</span>
+                  <span className="country-value">{countryData[categories[index].key]}</span>
+                </div>
+              </div>
             ))}
-          </tr>
-        </thead>
-        <tbody>
-        {[...Array(10)].map((_, rowIndex) => (
-            <tr key={rowIndex}>
-              {categories.map(category => {
-                const countrydata = top10Data[categories.indexOf(category)][rowIndex];
-                return (
-                  <td key={category}>
-                    <div className="country-flag-info">
-                    <img src={countrydata.countryInfo.flag} alt={`Flag of ${countrydata.country}`} />
-                    <div className="country-info">
-                      <span className="country-name">{countrydata.country}</span>
-                      <span className="country-value">{countrydata[category]}</span>
-                    </div>
-                    </div>
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
-
 export default CovidTableTop10;
