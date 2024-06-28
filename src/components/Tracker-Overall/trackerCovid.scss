@@ -1,17 +1,19 @@
+
 .tittle{
- font-size: 1.5625rem;
+ font-size: 25px;
  font-weight: 600 ;
-  
+ padding-left: 10px;
 }
-ul{
-  padding-left: 0;
+.boxData ul{
+  margin:0;
+  padding: 0px 10px;
 }
 li.data{ 
   display: flex;
   flex-direction: row;
-  padding: 2%;
+  //padding: 2%;
   justify-content: space-between;
-  width:350px;
+  width:95%;
   height: 3.125rem;
   border-radius: 0.3125rem;
   margin-bottom: 0.625rem;
@@ -19,11 +21,10 @@ li.data{
   align-items: center;
   font-family:'Poppins', sans-serif;
   color:rgb(18,17,87);
-  margin-left: 20px;
   border: 1px solid transparent;
 }
 li.data:hover{  
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .data.div1:hover{
   
@@ -45,10 +46,10 @@ li.data:hover{
 
 
 .data p {
-margin-right: 10px;
+padding-right: 10px;
 }
 .data h4{
-  margin-left:20px;
+  padding-left:20px;
 }
 
 

@@ -15,7 +15,7 @@ const TrackerFirst = () => {
 
     return (
         <section>
-            <h2 className="tittle">COVID-19 Tracker</h2>
+            <h1 className="tittle">COVID-19 Tracker</h1>
             <div className="boxData">
                 <ul>
                     <li className="data div1">
@@ -36,7 +36,6 @@ const TrackerFirst = () => {
                     </li>
                 </ul>
             </div>
-            <br/>
         </section>
         
     );
