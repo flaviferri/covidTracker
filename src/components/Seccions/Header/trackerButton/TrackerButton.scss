@@ -5,17 +5,15 @@
     background-color: #3639AE;
     color: #ffffff;
     text-align: center;
-    width: 120px;
-    height: 50px;
+    width: 160px;
+    height: 40px;
     transition: background-color 0.3s ease, color 0.3s ease; // Transición suave para el cambio de color
   
     a {
       color: inherit;
       text-decoration: none;
-      display: block;
       width: 100%;
       height: 100%;
-      padding: 10px;
     }
   
     &:hover {
@@ -23,19 +21,12 @@
     }
   
     &.highlighted {
-      background-color: white;
       color: #3639AE;
     }
   
     &.scrolled {
-      color: #ffffff; /* Asegura que el texto siga siendo blanco al hacer scroll */
+      color: white; /* Asegura que el texto siga siendo blanco al hacer scroll */
     }
-  
-  @media (max-width: 768px) {
-    .tracker-button {
-    display: none; // Oculta el tracker-button en dispositivos móviles
-    }
-  }
   }
   
   

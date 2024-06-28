@@ -10,7 +10,7 @@ $background-color_1: #e9f5fe;
     gap: 20px;
 	
 	.card {
-		@media (max-width: 767px) {
+		@media (max-width: 769px) {
 		  width: 100%;
 		  max-width: 300px; // Ajusta este valor según sea necesario
 		  margin: 10px ;
@@ -19,7 +19,7 @@ $background-color_1: #e9f5fe;
   
 
   .card-1 {
-	@media (max-width: 767px) {
+	@media (max-width: 769px) {
 	  display: none;
 	}
 }

@@ -95,6 +95,8 @@ $navbar-padding: 5px 10px;
       padding: 0;
       width: calc(80% - 80px);
       margin-left: 90px;
+      max-height: 300px; /* Altura máxima del menú */
+      overflow: auto; /* Permite barras de desplazamiento */
 
       li {
         width: 100%;
@@ -110,6 +112,10 @@ $navbar-padding: 5px 10px;
 
           &.active {
             display: flex;
+          }
+
+          .tracker-button {
+            display: none; /* Oculta el tracker-button en dispositivos móviles */
           }
         }
       }

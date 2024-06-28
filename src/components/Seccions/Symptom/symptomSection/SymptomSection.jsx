@@ -10,19 +10,19 @@ const SymptomSection = () => {
       <div className="symptom-cards">
         <SymptomCard
           className="card card-1"
-          icon="/public/images/banner-right-removebg-preview.png"
+          icon="/images/banner-right-removebg-preview.png"
           title="Aches and pains "
           description="Fever is a key symptom, experts say. Don't fixate on a number, but know it's really not a fever until your temperature reaches at least 100"
         />
         <SymptomCard
           className="card card-2"
-          icon="/public/images/cough-removebg-preview.png"
+          icon="/images/cough-removebg-preview.png"
           title="Runny nose"
           description="People of all ages who experience fever and/or cough associated with difficulty breathing/shortness of breath."
         />
         <SymptomCard
           className="card card-3"
-          icon="/public/images/breathing-removebg-preview.png"
+          icon="/images/breathing-removebg-preview.png"
           title="Sore throat"
           description="Older people, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, or cancer"
         />
