@@ -1,37 +1,53 @@
+@use "../../styles/variables.scss" as v;
+
 body{
-  background-color: #F4F6FA;
+  background-color: #F4F6FA; 
 }
-h2 {
-  margin-left: 35px;
-  margin-top: 20px;
-  color:#121158;
-  border-color: #000000; 
-}
-.table {
+
+.covid-table {
   width: 100%;
-  border-spacing: 25px;
-  color: #121158;
-  border-top: 1px solid#E6E7EA; 
-  
-  th {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    text-align: left;     
+  color: v.$primary-color;
+
+  h2 {
+    margin-left: 35px;
+  margin-top: 20px;
+  color:v.$primary-color;
+  border-color: #000000; 
+  font-size: 20px;
   }
 
-  td {
-    width: 170px;
-    height: 25px;
-    padding: 10px 20px;
-    text-align: left;
-    background-color: #FFFFFF;
-    border-left: 10px solid #F7F8FC;
-         
+  .grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    border-top: 1px solid v.$border-grey;
+  }
 
-    .country-flag-info {
+  .grid-item {
+    padding: 10px;
+    background-color: transparent;
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .country-data {
       display: flex;
       align-items: center;
+      padding: 5px;
+      border: 1px solid v.$background-td-color;
+      box-shadow: 0 15px 30px 0 rgba(20, 50, 90, 0.05);
+      margin-bottom: 10px;
+      transition: transform 0.2s ease-in-out;
+      background-color: v.$background-td-color;
+
+      &:hover {
+        background-color: v.$background-td-color;
+        transform: scale(1.1);
+      }
 
       img {
         width: 30px;
@@ -47,21 +63,36 @@ h2 {
 
         .country-name {
           font-size: 12px;
-          margin-bottom: 5px;
+          font-weight: bold;
+          margin-bottom: -5px;
         }
 
         .country-value {
           font-size: 18px;
           font-weight: bold;
-          color: #121158;
+          color: v.$primary-color;
         }
       }
     }
-    &:hover  {
-      background-color: #FFFFFF;
-      transform: scale(1.2);
-      transition: transform 0.2s ease-in-out;  
+  }
+
+  // Media query for screens up to 800px
+  @media (max-width: 800px) {
+    main{
+      width: 100%;
+    }
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
-  
+
+  // Media query for screens up to 478px
+  @media (max-width: 478px) {
+    main{
+      width: 100%;
+    }
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

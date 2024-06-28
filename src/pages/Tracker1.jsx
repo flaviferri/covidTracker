@@ -5,6 +5,7 @@ import SelectData from "../components/tracker1/SelectData";
 import Worldmap from "../components/tracker1/Worldmap";
 import useApi from "../services/useApi";
 import { countries_url } from "../config/urls"; 
+import "../styles/responsive-tracker1.scss"
 
 const Tracker1 = () =>{
     const [selectedCountry, setSelectedCountry] = useState('Afghanistan');

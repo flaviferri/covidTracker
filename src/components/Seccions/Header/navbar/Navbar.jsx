@@ -39,13 +39,13 @@ const NavbarHome = () => {
 
   const getLogoPath = () => {
     if (isMobile && scrolled) {
-      return '/public/images/logo.png';
+      return '/images/logo.png';
     } else if (isMobile && !scrolled) {
-      return '/public/images/logo.png';
+      return '/images/logo.png';
     } else if (!isMobile && scrolled) {
-      return '/public/images/logo.png';
+      return '/images/logo.png';
     } else {
-      return '/public/images/logo-white.png';
+      return '/images/logo-white.png';
     }
   };
 
