@@ -2,20 +2,20 @@
 A project to visualize and analyze COVID-19 data in real-time using React.
 
 ## Table of Contents
-- [Description ](#description)
-- [Main Features ](#main-features)
-- [Visuals  ](#visuals)
+- [Description 📝](#description)
+- [Main Features ✨ ](#main-features)
+- [Visuals 📷](#visuals)
 - [Built With 🛠️](#built-with)
 - [Key Features 🔑](#key-features)
 - [Installation and Execution  🚀](#installation-and-execution)
 - [Contributors ](#contributors)
 
 
-## Description 📝
+## Description 
 
 The COVID Tracker Dashboard is an interactive platform designed to visualize real-time data on the COVID-19 pandemic. Using the disease.sh API, the dashboard allows users to filter and sort data by country, visualize trend graphs, and access detailed information through an intuitive and responsive user interface.
 
-## Main Features ✨
+## Main Features 
 
 Real-time data visualization.
 Filters by country and keywords.
@@ -24,11 +24,12 @@ Interactive map with statistics by country.
 Responsive interface compatible with major browsers.
 
 
-## Visuals  📷
+## Visuals  
 
 <img width="926" alt="pantalla covid" src="https://github.com/flaviferri/covidTracker/assets/169152677/532f89f5-8a53-4e27-9ca8-50a2a4f0ffcd">
 
-(https://drive.google.com/file/d/18IpZRyus_JK-vnrVV-3U4-Bxo1h1L_jM/view)
+(https://github.com/flaviferri/covidTracker/assets/169152677/a07153b6-3017-46ac-b9a1-5d853fd15bac)
+
 
 ## Built With 
 
@@ -50,7 +51,7 @@ Interactive Map: Shows statistics by country when hovering over the map.
 (Responsiveness: Adapts to different screen sizes, ensuring usability on both mobile and desktop devices.)
 
 
-## Installation and Execution  🚀
+## Installation and Execution  
 
 To install and run the project locally, follow these steps:
 
