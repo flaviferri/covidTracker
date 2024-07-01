@@ -2,13 +2,13 @@
 A project to visualize and analyze COVID-19 data in real-time using React.
 
 ## Table of Contents
-- [Description](#description)
+- [Description 📝] (#description)
 - [Main Features ✨](#main-features)
 - [Visuals  📷](#visuals)
 - [Built With 🛠️](#built-with)
 - [Key Features 🔑](#key-features)
 - [Installation and Execution  🚀](#installation-and-execution)
-- [Contributors ✒️](#contributors)
+- [Contributors ](#contributors)
 
 
 ## Description 📝
@@ -80,7 +80,7 @@ bash
 Copiar código
 npm run dev
 
-## Contributors ✒️
+## Contributors 
 
 The following team of developers has contributed to the development of the "COVID Tracker Dashboard." Their efforts and dedication have been essential in bringing this project to fruition:
 
