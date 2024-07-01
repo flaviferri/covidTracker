@@ -26,16 +26,9 @@ Responsive interface compatible with major browsers.
 
 ## Visuals  📷
 
-(Below are some screenshots of the project:
+[<img width="926" alt="pantalla covid" src="https://github.com/flaviferri/covidTracker/assets/169152677/532f89f5-8a53-4e27-9ca8-50a2a4f0ffcd">]
 
 
-Home screen with global COVID-19 summary.
-
-
-Filterable and sortable data table.
-
-
-Trend graph of cases and deaths.)
 
 ## Built With 🛠️
 
