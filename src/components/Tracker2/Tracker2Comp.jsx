@@ -5,7 +5,6 @@ import { countries_url } from "../../config/urls";
 import column from "./Tr2Table";
 import './tracker2Comp.scss';
 
-
 export default function Tracker2Comp() {
     const { data: apiData, error } = useApi(countries_url);
     const [records, setRecords] = useState([]);

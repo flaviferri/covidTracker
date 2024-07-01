@@ -42,26 +42,3 @@ const TrackerFirst = () => {
 }
 
 export default TrackerFirst;
-
-{/* <section>
-<h2>COVID-19 Tracker</h2>
-<div className="boxData">
-    <div className="data">
-        <p>Total Cases</p>
-        <p>{data.cases}</p>
-    </div>
-    <div className="data">
-        <p>Active Cases</p>
-        <p>{data.active}</p>
-    </div>
-    <div className="data">
-        <p>Recovered Cases</p>
-        <p>{data.recovered}</p>
-    </div>
-    <div className="data">
-        <p>Deaths</p>
-        <p>{data.deaths}</p>
-    </div>
-</div>
-<br/>
-</section> */}

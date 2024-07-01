@@ -11,7 +11,6 @@ const categories = [
   { key: "recovered", label: "Top Recover" }
 ];
 
-
 const CovidTableTop10 = () => {
   const { data } = useApi('https://disease.sh/v3/covid-19/countries');
 

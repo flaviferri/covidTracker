@@ -7,19 +7,14 @@ import Tracker5 from "../pages/Tracker5";
 import Layouthomepage from "../layout/Layouthomepage";
 import ErrorPage from "../pages/ErrorPage";
 
-
 export const router = createBrowserRouter([
-    
-    
     {
-
         path: "/",
-            element: <Layouthomepage/>,
+        element: <Layouthomepage/>,
         errorElement:<ErrorPage />    
     },
 
-     {   path: "/trackers",
-       
+    {   path: "/trackers",
         errorElement:<ErrorPage />,  
         element: <Layout/>,
         children: [
@@ -43,6 +38,6 @@ export const router = createBrowserRouter([
                 element: <Tracker5/>,
                 errorElement:<ErrorPage />  
             },  
-    ]
-},
+        ]
+    },
 ])

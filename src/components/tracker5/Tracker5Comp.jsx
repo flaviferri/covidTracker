@@ -7,11 +7,9 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
-
 const processCountryData = (data) => {
     const chartData = {};
     
-
     data.forEach(countryData => {
         const countryName = countryData.country;
         const timeline = countryData.timeline;
@@ -64,8 +62,6 @@ const processCountryData = (data) => {
 
     return chartData;
 };
-
-
 
 const Tracker5Comp = () => {
     const { data: apiData, error } = useApi(groupCountries_dates);

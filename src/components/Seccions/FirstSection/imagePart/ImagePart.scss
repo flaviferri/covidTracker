@@ -6,7 +6,7 @@
   width: 40%;
   padding-top: 40px;
   @media (max-width: 769px) {
-    width: 100%; // Ocupa todo el ancho disponible en dispositivos móviles
+    width: 100%;
   }
 
   img {
@@ -15,11 +15,7 @@
    padding-left: 60px;
 
     @media (max-width: 769px) {
-      width: 80%; // Ocupa todo el ancho disponible en dispositivos móviles
-     
+      width: 80%;
     }
-   
   }
-
- 
 }

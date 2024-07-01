@@ -1,8 +1,6 @@
 import {useState, useEffect} from "react"
 import axios from 'axios'
 
-
-
 const UseApi = (url) =>{
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
@@ -29,12 +27,13 @@ const UseApi = (url) =>{
 }
 export default UseApi; 
 
+
+//-------------metodo 2---------------
+
 /* const UseApi = (url) =>{
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
 
-<<<<<<< HEAD
-    useEffect(()=>{ 
     useEffect(()=>{ 
         const getData = async() =>{
             try{
@@ -55,7 +54,6 @@ export default UseApi;
         getData(url);
     }, [url]);
     return{data,error};
-
 }
 export default UseApi; 
  */

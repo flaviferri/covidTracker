@@ -7,7 +7,7 @@
     text-align: center;
     width: 160px;
     height: 40px;
-    transition: background-color 0.3s ease, color 0.3s ease; // Transición suave para el cambio de color
+    transition: background-color 0.3s ease, color 0.3s ease;
   
     a {
       color: inherit;
@@ -25,7 +25,7 @@
     }
   
     &.scrolled {
-      color: white; /* Asegura que el texto siga siendo blanco al hacer scroll */
+      color: white;
     }
   }
   

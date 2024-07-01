@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as v;
+
 h2{
   padding-left: 10px;
   font-size: 20px;
@@ -17,8 +19,8 @@ h2{
  margin-left: 10px;
  transition: transform 0.3s ease;
  align-items: center;
- font-family:'Poppins', sans-serif;
- color:rgb(18,17,87);
+ font-family: v.$font;
+ color: v.$primary-color;
 }
 .dataBox:hover{
   transform: scale(1.05);

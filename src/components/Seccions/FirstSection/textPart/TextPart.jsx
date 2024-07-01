@@ -1,5 +1,5 @@
 import React from 'react';
-import './TextPart.scss'; // Importa los estilos Sass
+import './TextPart.scss';
 
 const TextPart = () => {
   return (

@@ -14,7 +14,6 @@ const Worldmap = () => {
       return <div>Loading...</div>;
   }
 
-    
     const dataCountries=data
     .filter(country => country.countryInfo && country.countryInfo.iso2) // Filtra los países sin countryInfo o iso2
     .map(country => ({

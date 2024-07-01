@@ -13,20 +13,20 @@ $navbar-padding: 5px 10px;
   font-family: $font-family_1;
   font-size: 16px;
   width: 100%;
-  position: fixed; // Cambiado a fixed para que la navbar esté fija en la parte superior
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; // Asegura que la navbar esté por encima de otros contenidos
-  transition: background-color 0.3s ease, color 0.3s ease; // Añade una transición suave
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: none;
 
   &.scrolled {
-    background-color: white; // Cambia el color de fondo al hacer scroll
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Añade una sombra si lo deseas
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .navLinks li a {
-      color: black; // Cambia el color del texto
+      color: black;
     }
     .navLinks li:last-child{
       a{
@@ -35,11 +35,11 @@ $navbar-padding: 5px 10px;
     }
 
     .hamburger-lines {
-      background-color: black; // Cambia el color de las líneas del menú hamburguesa
+      background-color: black;
     }
 
     .navbar-logo img {
-      filter: none; // Invertir el color del logo si es necesario
+      filter: none;
     }
   }
 
@@ -94,8 +94,8 @@ $navbar-padding: 5px 10px;
       padding: 0;
       width: calc(80% - 80px);
       margin-left: 90px;
-      max-height: 300px; /* Altura máxima del menú */
-      overflow: auto; /* Permite barras de desplazamiento */
+      max-height: 300px;
+      overflow: auto;
 
       li {
         width: 100%;
@@ -114,7 +114,7 @@ $navbar-padding: 5px 10px;
           }
 
           .tracker-button {
-            display: none; /* Oculta el tracker-button en dispositivos móviles */
+            display: none;
           }
         }
       }
@@ -157,4 +157,3 @@ $navbar-padding: 5px 10px;
   background-color: grey;
   margin: 3px 0;
 }
-

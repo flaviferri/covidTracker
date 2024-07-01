@@ -12,8 +12,7 @@ const Carddata = () => {
     if (!data) {
         return <div>Loading...</div>;
     }
-
-    
+   
   return (
     <div className="cardgeneral">
         <div className="card">

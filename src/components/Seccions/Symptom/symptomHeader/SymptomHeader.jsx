@@ -1,8 +1,6 @@
 import React from 'react';
 import './SymptomHeader.scss';
 
-
-
 const SymptomHeader = () => {
   return (
     <div className="symptom-header">

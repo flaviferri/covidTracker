@@ -65,5 +65,4 @@ const column = [
     }
 ];
 
-
 export default column;
