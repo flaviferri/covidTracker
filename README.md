@@ -28,7 +28,10 @@ Responsive interface compatible with major browsers.
 
 <img width="926" alt="pantalla covid" src="https://github.com/flaviferri/covidTracker/assets/169152677/532f89f5-8a53-4e27-9ca8-50a2a4f0ffcd">
 
-(https://github.com/flaviferri/covidTracker/assets/169152677/a07153b6-3017-46ac-b9a1-5d853fd15bac)
+
+
+https://github.com/flaviferri/covidTracker/assets/169152677/d502ba14-19d8-4466-87cd-66d69068a3df
+
 
 
 ## Built With 
