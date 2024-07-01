@@ -2,9 +2,9 @@
 A project to visualize and analyze COVID-19 data in real-time using React.
 
 ## Table of Contents
-- [Description 📝] (#description)
-- [Main Features ✨](#main-features)
-- [Visuals  📷](#visuals)
+- [Description ](#description)
+- [Main Features ](#main-features)
+- [Visuals  ](#visuals)
 - [Built With 🛠️](#built-with)
 - [Key Features 🔑](#key-features)
 - [Installation and Execution  🚀](#installation-and-execution)
@@ -30,7 +30,7 @@ Responsive interface compatible with major browsers.
 
 (https://drive.google.com/file/d/18IpZRyus_JK-vnrVV-3U4-Bxo1h1L_jM/view)
 
-## Built With 🛠️
+## Built With 
 
 React: Main framework for building the interface.
 Vite: Fast build tool.
@@ -41,7 +41,7 @@ Git: Version control.
 Bootstrap: For styles and UI components.
 
 
-## Key Features  🔑
+## Key Features  
 
 Interactive User Interface: Facilitates navigation and data visualization.
 Filters and Sorting: Allows users to filter by country and sort data by columns.
