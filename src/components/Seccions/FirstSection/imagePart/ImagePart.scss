@@ -1,0 +1,21 @@
+.image-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 40%;
+  padding-top: 40px;
+  @media (max-width: 769px) {
+    width: 100%;
+  }
+
+  img {
+   width: 600px;
+    
+   padding-left: 60px;
+
+    @media (max-width: 769px) {
+      width: 80%;
+    }
+  }
+}

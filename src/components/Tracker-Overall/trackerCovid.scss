@@ -1,0 +1,78 @@
+@use "../../styles/variables.scss" as v;
+
+.tittle{
+ font-size: 25px;
+ font-weight: 600 ;
+ padding-left: 10px;
+}
+.boxData ul{
+  margin:0;
+  padding: 0px 10px;
+}
+li.data{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:95%;
+  height: 3.125rem;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.625rem;
+  transition: transform 0.3s ease;
+  align-items: center;
+  font-family: v.$font;
+  color: v.$primary-color;
+  border: 1px solid transparent;
+}
+li.data:hover{  
+  transform: scale(1.05);
+}
+.data.div1:hover{ 
+  border: 1px v.$red-font-color solid;
+}
+.data.div2:hover{
+  border: 1px v.$orange-font-color solid;
+}
+.data.div3:hover{
+  border: 1px v.$green-font-color solid;
+}
+.data.div4:hover{
+  border: 1px v.$secondary-color solid;
+}
+.data p {
+padding-right: 10px;
+}
+.data h4{
+  padding-left:20px;
+}
+.data.div1 {
+  background-color:rgb(255,241,242);
+}
+.data.div1 p{
+  color: v.$red-font-color;
+  font-weight: 700;
+  font-size: 	1.5625rem;
+}
+.data.div2 {
+  background-color: rgb(255,249,241);
+}
+.data.div2 p{
+  color: v.$orange-font-color;
+  font-weight: 700;
+  font-size: 	1.5625rem;
+}
+.data.div3 {
+  background-color: rgb(236,254,235);
+}
+ .data.div3 p{
+  color: v.$green-font-color;
+  font-weight: 700;
+  font-size: 	1.5625rem;
+}
+ .data.div4 {
+  background-color: rgb(237,251,254);
+ }
+ .data.div4 p{
+  color: v.$secondary-color;
+  font-weight: 700;
+  font-size: 	1.5625rem;
+ }

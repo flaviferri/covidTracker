@@ -1,0 +1,49 @@
+@use "../../styles/variables.scss" as v;
+
+* {
+    font-family: v.$font;
+}
+
+h3 {
+    color: v.$primary-font-color;
+    font-size: 22px;
+}
+
+.tr2Table-container {
+    padding: 10px;
+    background-color: v.$background-color;
+    width: 100%;
+    
+    .title, .searchField {
+        background-color: white;
+    }
+    
+    .title {
+        padding: 0.2rem 0.8rem;
+        border-bottom: 1px solid v.$border-grey;
+    }
+    
+    .searchField {
+        display: flex;
+        justify-content: right;
+        padding: 0.8rem 0.8rem;
+    }
+
+    #search {
+        height: 2rem;
+        width: 7rem;
+        margin-left: 1rem;
+    }
+
+    .searchLabel {
+        align-self: center;
+    }
+
+    .sorted {
+        background-color: #E4E6F6 !important;
+    }
+
+    .dataTable {
+        width: 100%;
+    }
+}

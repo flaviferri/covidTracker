@@ -1,0 +1,31 @@
+@use "../../styles/variables.scss" as v;
+
+.tracker5-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: v.$background-color;
+
+    .chart-container {
+        background-color: v.$background-td-color;
+        padding: 20px;
+        padding-top: 0;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .chart-title {
+        font-size: 1.2rem;
+        color: v.$primary-color;
+        margin: 10px 10px 10px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid v.$border-grey;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .tracker5-container {
+        grid-template-columns: 1fr;
+    }
+}
