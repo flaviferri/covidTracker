@@ -8,7 +8,7 @@ A project to visualize and analyze COVID-19 data in real-time using React.
 - [Built With 🛠️](#built-with)
 - [Key Features 🔑](#key-features)
 - [Installation and Execution  🚀](#installation-and-execution)
-- [Contributors ](#contributors)
+- [Contributors ✒️](#contributors)
 
 
 ## Description 
